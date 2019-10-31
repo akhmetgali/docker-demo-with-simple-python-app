@@ -5,7 +5,7 @@ workflows:
   build-and-deploy:
     jobs:
       - aws-ecr/build_and_push_image:
-          account-url: "${AWS_ACCOUNT_ID_ENV_VAR_NAME}.dkr.ecr.${AWS_DEFAULT_REGION_ENV_VAR_NAME}.amazonaws.com"
-          repo: "${AWS_RESOURCE_NAME_PREFIX_ENV_VAR_NAME}"
-          region: AWS_DEFAULT_REGION_ENV_VAR_NAME
+          account-url: "${AWS_ECR_ACCOUNT_URL}"
+          repo: "${AWS_RESOURCE_NAME_PREFIX}"
+          region: AWS_DEFAULT_REGION
           tag: "${CIRCLE_SHA1}"
