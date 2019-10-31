@@ -8,4 +8,4 @@ workflows:
           account-url: AWS_ECR_ACCOUNT_URL
           repo: rakhmetgaliev
           region: AWS_DEFAULT_REGION
-          tag: CIRCLE_SHA1
+          tag: "${CIRCLE_SHA1}"
