@@ -6,6 +6,6 @@ workflows:
     jobs:
       - aws-ecr/build_and_push_image:
           account-url: AWS_ECR_ACCOUNT_URL
-          repo: AWS_RESOURCE_NAME_PREFIX
+          repo: rakhmetgaliev
           region: AWS_DEFAULT_REGION
           tag: CIRCLE_SHA1
